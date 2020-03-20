@@ -1,0 +1,15 @@
+bash commands: -
+i) pwd
+ii) git clone https://github.com/pritishmishra/fog-db
+iii) cd fog-db
+iv) pwd
+v) git status
+vi) git log -1
+vii) git pull origin master
+viii) add files to fog-db folder
+ix) git status
+x) git add .
+xi) git commit -m "adding client file for client-server communication"
+ if you get the msg "who you are"
+xii) git -c user.name=".........." -c user.email=".........." commit -m "adding client file for client  server communication"
+xiii) git push origin master
