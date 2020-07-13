@@ -1,24 +1,142 @@
-<html>
-    <head>
-        <title>Sign-Up Form</title>
-        <link rel="stylesheet" href="styles.css">
-        <link href="https://fonts.googleapis.com/css2?family=Pangolin&display=swap" rel="stylesheet">
-    </head>
-    <body>
-        <div class="sign-up-form">
-            <img src="imgg.jpg">
-            <h1>Sign Up Now</h1>
-            <form>
-                <input type="email" class="input-box" placeholder="Your email">
-                <input type="password" class="input-box" placeholder="Your password">
-                <p><span><input type="checkbox"></span> I agree to the terms and conditions</p>
-                <button type="button" class="Sign-btn">Sign Up</button>
-                <hr>
-                <p class="or">OR</p>
-                <button type="button" class="twitter-btn">Login with twitter</button>
-                <p>Do you have an account ? <a href="#">Sign in</a></p>
-                
-            </form>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Sign Up</title>
+<!-- 
+Magazee Template 
+http://www.templatemo.com/tm-514-magazee
+-->
+  <!-- load CSS -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400">    <!-- Google web font "Open Sans" -->
+  <link rel="stylesheet" href="css/bootstrap.min.css">                                        <!-- https://getbootstrap.com/ -->
+  <link rel="stylesheet" href="css/signup.css">                                     <!-- Templatemo style -->
+
+  <script>
+    var renderPage = true;
+
+    if(navigator.userAgent.indexOf('MSIE')!==-1
+      || navigator.appVersion.indexOf('Trident/') > 0){
+        /* Microsoft Internet Explorer detected in. */
+        alert("Please view this in a modern browser such as Chrome or Microsoft Edge.");
+        renderPage = false;
+    }
+  </script>
+
+</head>
+
+<body>
+  <!-- Loader -->
+  <div id="loader-wrapper">
+    <div id="loader"></div>
+    <div class="loader-section section-left"></div>
+    <div class="loader-section section-right"></div>
+  </div>
+
+ <div class="container">
+
+
+
+
+
+<!-- 6th Section -->
+<section class="row">
+  <div class="col-lg-12 tm-form-header pl-5 pr-5">
+    <h2 class="tm-container-inner tm-text-color-white">Sign Up</h2>
+  </div>
+  <div class="col-lg-12 pl-2 pl-sm-3 pl-md-5 pr-2 pr-sm-3 pr-md-5">
+    <form action="signup.html" method="post" class="row tm-container-inner tm-contact-form">
+      <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+        <div class="form-group">
+          <input type="text" id="contact_name" name="contact_name" class="form-control" placeholder="Full Name"  required/>
         </div>
-    </body>
+        <div class="form-group">
+          <input type="email" id="contact_email" name="contact_email" class="form-control" placeholder="Your Email"  required/>
+        </div>
+        <div class="form-group">
+          <select>
+            <option value="">Education </option>
+            <option value="ceo">School Student</option>
+            <option value="ms">Graduate</option>
+            <option value="om">Dropout</option>
+          
+          </select>
+        </div>
+        <div class="form-group">
+          <select>
+            <option value="">Age</option>
+            <option value="100k"> upto 20</option>
+            <option value="200k">21 - 30</option>
+            <option value="300k">31 and above </option>
+          </select>
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+        <div class="form-group">
+          <div class="row">
+            <div class="col-lg-6">
+              <label>
+                <input type="radio" name="gender" value="m" required> Male
+              </label>
+            </div>
+            <div class="col-lg-6">
+              <label>
+                <input type="radio" name="gender" value="f" required> Female
+              </label>
+            </div>
+          </div>
+        </div>
+        <div class="form-group">
+          <textarea id="contact_message" name="contact_message" class="form-control" rows="6" placeholder="Board Of Education" required></textarea>
+        </div>
+      </div>
+      <div class="col-xs-12 mt-4 tm-center">
+        <button type="submit" class="btn btn-primary">Lets Go</button>
+      </div>
+    </form>
+  </div>
+  <div class="col-lg-12 tm-bg-color-gray tm-text-color-white tm-font-thin tm-form-footer">
+    <div class="row tm-container-inner">
+      <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6">
+        <div class="tm-footer-info-box">
+          
+          
+        </div>
+      </div>
+      <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6">
+        <div class="tm-footer-info-box">
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<div class="row">
+  <div class="col-lg-12">
+    <p class="text-center small tm-copyright-text mb-0">Copyright © 2020 <span class="tm-current-year">2020</span> Team Braniacs_1.0 Smart India Hackathon </p>
+  </div>
+</div>
+</div>
+<!-- load JS -->
+<script src="js/jquery-3.2.1.slim.min.js"></script>         <!-- https://jquery.com/ -->
+<script>
+
+  /* DOM is ready
+  ------------------------------------------------*/
+  $(function(){
+
+    if(renderPage) {
+      $('body').addClass('loaded');
+    }
+
+    $('.tm-current-year').text(new Date().getFullYear());  // Update year in copyright
+  });
+
+</script>
+
+</body>
 </html>
