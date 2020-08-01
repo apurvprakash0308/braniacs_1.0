@@ -1663,17 +1663,35 @@ def mcq4(request):
             c = c+1
 
 
-        answers = Personality.objects.all()
+        maximum = max(r, i, a, s, e, c)
 
-        for a in answers:
-            print(a.answers)
+        if maximum == r:
+            message = "Realistic"        
+            message1 = "Engineers, Architecture, Dietitian, Criminal Justice, Forestry and Athelete"
+
+        elif maximum == i:
+            message = "Investigative"
+            message1 = "Biology, Chemistry, Computer Science, Economics, Law, Mathematics, Psychology and Data Analyst"
         
+        elif maximum == a:
+            message = "Artistic"
+            message1 = "Advertising, Art, Graphic Design, Music, Theater and Writer"
+
+        elif maximum == s:
+            message = "Social"
+            message1 = "Communications, Anthropology, Education, Nursing, Religion, Sociology and Social Work "
+
+        elif maximum == e:
+            message = "Enterprising"
+            message1 = "Business, Finance, Law Enforcement, Real Estate, Marketing and Journalism"
+
+        elif maximum == c:
+            message = "Conventional"
+            message1 = "Accounting, Computer Information System, Library, Science and Administrative Work"       
+
         
 
-
-        return render(request, 'resultp.html')
-
+        return render(request, 'resultp.html', {'message': message, 'message1': message1})
         
-
     else:
         return render (request,'mcq4.html')
